@@ -1,24 +1,19 @@
 #include <stdio.h>
 /**
- * main - this is where our program starts and end
+ * main - main function
  *
- * Return:returns zero if no error and non zero if error
-*/
+ * Return: 0
+ */
 int main(void)
 {
-	int num;
+	int i = 0;
 
-	num = '0';
-	while (num <= '9')
+	for (i = 10; i < 99; i++)
 	{
-		putchar(num);
-		if (num <= '8')
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		num++;
+		putchar(i);
+		putchar(',');
 	}
+
 	putchar('\n');
 	return (0);
-	}
+}

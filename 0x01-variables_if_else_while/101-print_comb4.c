@@ -1,38 +1,34 @@
 #include <stdio.h>
+
 /**
- * main - the program start running here
+ * main - Function
  *
- * Return: returns zero if error and non zero if no error
-*/
+ * Return: Always 0.
+ */
 int main(void)
 {
-		int num1, num2, num3;
+	int d1, d2, d3
 
-		num1 = '0';
-		while (num1 <= '9')
+	for (d1 = 0; d1 < 8; d1++)
+	{
+		for (d2 = d1 + 1; d2 < 9; d2++)
 		{
-			for (num2 = '0'; num2 <= '9'; num2++)
+			for (d3 = d2 + 1; d3 < 10; d3++)
 			{
-			for (num3 = '0'; num3 <= '9'; num3++)
-			{
-				if (num1 < num2 && num2 < num3)
-				{
-					putchar(num1);
-					putchar(num2);
-					putchar(num3);
-					if (num1 != '7' && num2 != 8 && num3 != 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				else
-				{
-				}
+				putchar((d1 % 10) + '0');
+				putchar((d2 % 10) + '0');
+				putchar((d3 % 10) + '0');
+
+				if (d1 == 7 && d2 == 8 && d3 == 9)
+					continue;
+
+				putchar(',');
+				putchar(' ');
 			}
-			}
-		num1++;
 		}
-		putchar('\n');
-		return (0);
+	}
+
+	putchar('\n');
+
+	return (0);
 }
