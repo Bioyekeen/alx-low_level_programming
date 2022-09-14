@@ -1,35 +1,38 @@
 #include <stdio.h>
-
 /**
- * main - Prints all possible combinations of three different digits,
- *        in ascending order, separated by a comma followed by a space.
+ * main - the program start running here
  *
- * Return: Always 0.
- */
+ * Return: returns zero if error and non zero if no error
+*/
 int main(void)
 {
-	int digit1, digit2, digit3;
+		int num1, num2, num3;
 
-	for (digit1 = 0; digit1 < 8; digit1++)
-	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		num1 = '0';
+		while (num1 <= '9')
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (num2 = '0'; num2 <= '9'; num2++)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
-
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
-					continue;
-				
-				putchar(',');
-				putchar(' ');
+			for (num3 = '0'; num3 <= '9'; num3++)
+			{
+				if (num1 < num2 && num2 < num3)
+				{
+					putchar(num1);
+					putchar(num2);
+					putchar(num3);
+					if (num1 != '7' && num2 != 8 && num3 != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				else
+				{
+				}
 			}
+			}
+		num1++;
 		}
-	}
-
-	putchar('\n');
-
-	return (0);
+		putchar('\n');
+		return (0);
 }
