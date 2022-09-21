@@ -8,13 +8,11 @@
  */
 int main(void)
 {
-	int a;
-	int b;
+	char s1[] = "Hello";
+	char s2[] = "World!";
 
-	a = 98;
-	b = 42;
-	printf("a=%d, b=%d\n", a, b);
-	swap_int(&a, &b);
-	printf("a=%d, b=%d\n", a, b);
+	printf("%d\n", _strcmp(s1, s2));
+	printf("%d\n", _strcmp(s2, s1));
+	printf("%d\n", _strcmp(s1, s1));
 	return (0);
 }
