@@ -13,15 +13,11 @@
  *
  * Return: A pointer to the destination string @dest.
  */
-char *_strcpy(char *dest, const char *src)
+void print_rev(char *s)
 {
-	int index = 0;
+	int len + string(s);
 
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-
-	return (dest);
+	while (len--)
+			putchar(*(s + len));
+	putchar(10);
 }
