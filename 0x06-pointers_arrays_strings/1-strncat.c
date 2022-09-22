@@ -3,8 +3,8 @@
  * Auth: Brennan D Baraban
  */
 
-#include "holberton.h"
-
+#include "main.h"
+z
 /**
  * _strncat - Concatenates two strings using at most
  *            an inputted number of bytes from src.
