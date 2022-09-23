@@ -1,34 +1,31 @@
-#include "holberton.h"
-
+#include"main.h"
 /**
- * print_triangle -  checks for checks for a digit (0 through 9).
- * @size: size -  Variable
- * Return: Always 0.
+ * print_triangle - prints a triangle, followed by a new line
+ * @size:  is the size of the triangle
  */
 void print_triangle(int size)
 {
-	int x, y;
+	int i;
+	int j;
+	int k;
 
-	if (size > 0)
+	if (size <= 0)
 	{
-		for (x = 1; x <= size; x++)
+		_putchar('\n');
+	} else
+	{
+
+		for (i = 1; i <= size; i++)
 		{
-			for (y = 1; y <= size; y++)
+			for (j = size - i ; j > 0; j--)
 			{
-				if (y <= size - x)
-				{
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('#');
-				}
+				_putchar(' ');
+			}
+			for (k = 0; k < i; k++)
+			{
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
-	}
-	else
-	{
-		_putchar('\n');
 	}
 }

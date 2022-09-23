@@ -1,20 +1,17 @@
 #include "main.h"
-
 /**
- * print_line -  checks for checks for a digit (0 through 9).
- * @n: n -  Variable
- * Return: Always 0.
- */
+ * print_line - print a straight line
+ *
+ * @n: is the number of times the _ character
+ *     should be printed
+*/
 void print_line(int n)
 {
-	int x;
+	int i;
 
-	if (n > 0)
+	for (i = 0; i < n; i++)
 	{
-		for (x = 1; x <= n; x++)
-		{
-			_putchar(95);
-		}
+		_putchar('_');
 	}
 	_putchar('\n');
 }
