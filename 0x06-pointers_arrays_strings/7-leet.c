@@ -1,8 +1,3 @@
-/*
- * File: 7-leet.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**

@@ -1,10 +1,5 @@
-/*
- * File: 1-strncat.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
-z
+
 /**
  * _strncat - Concatenates two strings using at most
  *            an inputted number of bytes from src.

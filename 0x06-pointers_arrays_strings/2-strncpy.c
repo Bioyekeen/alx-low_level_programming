@@ -1,8 +1,3 @@
-/*
- * File: 2-strncpy.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**

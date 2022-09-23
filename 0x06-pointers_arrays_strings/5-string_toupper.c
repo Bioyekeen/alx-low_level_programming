@@ -1,8 +1,3 @@
-/*
- * File: 5-string_toupper.c
- * Auth: Brennan D Baraban
- */
-
 #include "main.h"
 
 /**
