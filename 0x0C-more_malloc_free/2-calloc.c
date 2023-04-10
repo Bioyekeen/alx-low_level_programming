@@ -1,4 +1,10 @@
-#include "main.h"
+(30 sloc)  760 Bytes
+/*
+ * File: 2-calloc.c
+ * Auth: Brennan D Baraban
+ */
+
+#include "holberton.h"
 #include <stdlib.h>
 
 /**

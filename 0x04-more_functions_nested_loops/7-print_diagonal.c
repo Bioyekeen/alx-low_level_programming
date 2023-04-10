@@ -1,26 +1,33 @@
 #include "main.h"
 
 /**
- * print_diagonal - draws a diagonal line on the terminal
- * @n: The length of the line
+ * print_diagonal -  checks for checks for a digit (0 through 9).
+ * @n: n -  Variable
+ *
+ * Return: Always 0.
  */
-
 void print_diagonal(int n)
 {
-	int column, space, i;
+int x, y;
 
-	if (n <= 0)
-		_putchar('\n');
-	else
-	{
-		for (column = 0; column < n; column++)
-		{
-			i = column - 1;
-
-			for (space = 0; space <= i; space++)
-				_putchar(' ');
-			_putchar('\\');
-			_putchar('\n');
-		}
-	}
+if (n > 0)
+{
+for (x = 1; x <= n; x++)
+{
+for (y = 1; y <= n; y++)
+{
+if (x == y)
+{
+_putchar(92);
+break;
+}
+_putchar(' ');
+}
+_putchar('\n');
+}
+}
+else
+{
+_putchar('\n');
+}
 }

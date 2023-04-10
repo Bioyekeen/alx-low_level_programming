@@ -1,46 +1,32 @@
 #include "main.h"
-
 /**
- * rot13 - Encodes a string using rot13.
- * @str: The string to be encoded.
- *
- * Return: A pointer to the encoded string.
+ * *rot13 - function that encodes a string using rot13.
+ * @s: pointer pointed to the variable s , of type character
+ * Return: Pointer P , pointed to the variable s of type char.
+ * Update V2.0 : using Pointers instead of arrays to minimize the use
+ * of allocated memory and to improve the esthetic and simplicity of the code.
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int indx1 = 0, indx2;
-	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
-			     'G', 'H', 'I', 'J', 'K', 'L',
-			     'M', 'N', 'O', 'P', 'Q', 'R',
-			     'S', 'T', 'U', 'V', 'W', 'X',
-			     'Y', 'Z', 'a', 'b', 'c', 'd',
-			     'e', 'f', 'g', 'h', 'i', 'j',
-			     'k', 'l', 'm', 'n', 'o', 'p',
-			     'q', 'r', 's', 't', 'u', 'v',
-			     'w', 'x', 'y', 'z'};
-	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
-			     'T', 'U', 'V', 'W', 'X', 'Y',
-			     'Z', 'A', 'B', 'C', 'D', 'E',
-			     'F', 'G', 'H', 'I', 'J', 'K',
-			     'L', 'M', 'n', 'o', 'p', 'q',
-			     'r', 's', 't', 'u', 'v', 'w',
-			     'x', 'y', 'z', 'a', 'b', 'c',
-			     'd', 'e', 'f', 'g', 'h', 'i',
-			     'j', 'k', 'l', 'm'};
+int i;
+char *p = s;
 
-	while (str[indx1])
-	{
-		for (indx2 = 0; indx2 < 52; indx2++)
-		{
-			if (str[indx1] == alphabet[indx2])
-			{
-				str[indx1] = rot13key[indx2];
-				break;
-			}
-		}
+char *original = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char *code = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-		indx1++;
-	}
-
-	return (str);
+while (*s != '\0')
+{
+i = 0;
+while (i < 53)
+{
+if (*s == original[i])
+{
+*s = code[i];
+break;
+}
+i++;
+}
+s++;
+}
+return (p);
 }

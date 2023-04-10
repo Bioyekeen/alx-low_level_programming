@@ -1,26 +1,25 @@
-#include "main.h"
-
+#include"main.h"
 /**
- * _strncpy - Copies at most an inputted number
- *            of bytes from string src into dest.
- * @dest: The buffer storing the string copy.
- * @src: The source string.
- * @n: The maximum number of bytes to copied from src.
- *
- * Return: A pointer to the resulting string dest.
+ * _strncpy - copy string
+ * @src: pointer of char
+ * @dest: pointer of char
+ * @n: integer
+ * Return: char
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	int index = 0, src_len = 0;
+int i = 0;
 
-	while (src[index++])
-		src_len++;
-
-	for (index = 0; src[index] && index < n; index++)
-		dest[index] = src[index];
-
-	for (index = src_len; index < n; index++)
-		dest[index] = '\0';
-
-	return (dest);
+while (i < n && src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+if (i < n)
+{
+for (; i < n; i++)
+dest[i] = '\0';
+}
+return (dest);
 }

@@ -2,16 +2,35 @@
 #include <stdlib.h>
 
 /**
- * free_grid - Frees a 2-dimensional array of integers.
- * @grid: The 2-dimensional array of integers to be freed.
- * @height: The height of grid.
- */
-void free_grid(int **grid, int height)
+  * _strdup - Duplicate a string
+  * @str: the string to duplicate
+  *
+  * Return: the string duplicated
+  */
+char *_strdup(char *str)
 {
-	int index;
+	int a = 0, i = 1;
+	char *s;
 
-	for (index = 0; index < height; index++)
-		free(grid[index]);
+	if (str == NULL)
+		return (NULL);
 
-	free(grid);
+	while (str[i])
+	{
+		i++;
+	}
+
+	s = malloc((sizeof(char) * i) + 1);
+
+	if (s == NULL)
+		return (NULL);
+
+	while (a < i)
+	{
+		s[a] = str[a];
+		a++;
+	}
+
+	s[a] = '\0';
+	return (s);
 }

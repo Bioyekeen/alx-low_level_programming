@@ -1,24 +1,27 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
-* print_array - prints n element of array
-* @a: array
-* @n: number of elements
-* Return: nothing
-*/
+ * print_array - check the code for Holberton School students.
+ * @a: pointer int type
+ * @n: is a int variable
+ * Return: Always 0.
+ */
 
 void print_array(int *a, int n)
 {
-	int inc;
+int i, inte;
 
-	for (inc = 0; inc < n ; inc++)
-	{
-		if (inc != n - 1)
-			printf("%d, ", a[inc]);
-		else
-			printf("%d", a[inc]);
+for (i = 0; i < n; i++)
+{
 
-	}
-	putchar(10);
+inte = *(a + i);
+
+printf("%d", inte);
+
+if (i != n - 1)
+printf(", ");
+}
+
+printf("\n");
 }
